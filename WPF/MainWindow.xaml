@@ -1,0 +1,156 @@
+﻿<Window x:Class="SGSTest.WPF.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+  mc:Ignorable="d"
+  Title="SGS Test WPF Form" Height="450" Width="800" WindowState="Maximized">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="5" />
+      <RowDefinition Height="25" />
+      <RowDefinition Height="5" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="5" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="5" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="5" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="5" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="5" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="5" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="5" />
+    </Grid.ColumnDefinitions>
+    <ComboBox 
+      x:Name="CityCB" Text="Choose city"
+      IsEditable="True" IsReadOnly="True"
+      DisplayMemberPath="Name"
+      Grid.Column="1" Grid.Row="1" SelectionChanged="CityCB_SelectionChanged" 
+    />
+    <ComboBox 
+      x:Name="ShopCB" Text="Choose shop"
+      IsEditable="True" IsReadOnly="True"
+      DisplayMemberPath="Name"
+      Grid.Column="3" Grid.Row="1" SelectionChanged="ShopCB_SelectionChanged" 
+    />
+    <ComboBox 
+      x:Name="EmployeeCB" Text="Choose employee"
+      IsEditable="True" IsReadOnly="True"
+      DisplayMemberPath="Name"
+      Grid.Column="5" Grid.Row="1" SelectionChanged="EmployeeCB_SelectionChanged" 
+    />
+    <ComboBox 
+      x:Name="TeamCB" Text="Choose team"
+      IsEditable="True" IsReadOnly="True"
+      DisplayMemberPath="Name"
+      Grid.Column="7" Grid.Row="1" SelectionChanged="TeamCB_SelectionChanged" 
+    />
+    <ComboBox 
+      x:Name="ShiftCB" Text="Choose shift"
+      IsEditable="True" IsReadOnly="True"
+      DisplayMemberPath="Name" SelectedItem="{Binding Path=Id}"
+      Grid.Column="9" Grid.Row="1" SelectionChanged="ShiftCB_SelectionChanged" 
+    />
+    <Grid Grid.Column="1" Grid.ColumnSpan="9" Grid.Row="3">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="10" />
+        <RowDefinition Height="25" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="25" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="25" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="25" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="25" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="25" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="100" />
+        <ColumnDefinition Width="5" />
+        <ColumnDefinition MaxWidth="200" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <TextBlock 
+        FontSize="16"
+        FontWeight="Bold"
+        HorizontalAlignment="Right" VerticalAlignment="Center" 
+        Grid.Column="1" Grid.Row="1"
+      >
+        City:
+      </TextBlock>
+      <TextBlock 
+        FontSize="16"
+        FontWeight="Bold"
+        HorizontalAlignment="Right" VerticalAlignment="Center" 
+        Grid.Column="1" Grid.Row="3"
+      >
+        Shop:
+      </TextBlock>
+      <TextBlock 
+        FontSize="16"
+        FontWeight="Bold"
+        HorizontalAlignment="Right" VerticalAlignment="Center" 
+        Grid.Column="1" Grid.Row="5"
+      >
+        Employee:
+      </TextBlock>
+      <TextBlock 
+        FontSize="16"
+        FontWeight="Bold"
+        HorizontalAlignment="Right" VerticalAlignment="Center" 
+        Grid.Column="1" Grid.Row="7"
+      >
+        Team:
+      </TextBlock>
+      <TextBlock 
+        FontSize="16"
+        FontWeight="Bold"
+        HorizontalAlignment="Right" VerticalAlignment="Center" 
+        Grid.Column="1" Grid.Row="9"
+      >
+        Shift:
+      </TextBlock>
+      <TextBlock 
+        x:Name="CityTB" FontSize="16"
+        HorizontalAlignment="Left" VerticalAlignment="Center" 
+        Grid.Column="3" Grid.Row="1"
+      />
+      <TextBlock 
+        x:Name="ShopTB" FontSize="16"        
+        HorizontalAlignment="Left" VerticalAlignment="Center" 
+        Grid.Column="3" Grid.Row="3"
+      />
+      <TextBlock 
+        x:Name="EmployeeTB" FontSize="16"        
+        HorizontalAlignment="Left" VerticalAlignment="Center" 
+        Grid.Column="3" Grid.Row="5"
+      />
+      <TextBlock 
+        x:Name="TeamTB" FontSize="16"
+        HorizontalAlignment="Left" VerticalAlignment="Center" 
+        Grid.Column="3" Grid.Row="7"
+      />
+      <TextBlock 
+        x:Name="ShiftTB" FontSize="16"        
+        HorizontalAlignment="Left" VerticalAlignment="Center" 
+        Grid.Column="3" Grid.Row="9"
+      />
+      <Button
+        x:Name="SaveBtn" IsEnabled="False"
+        FontSize="16" FontWeight="Bold" 
+        Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="11" Click="SaveBtn_Click"
+      >
+        Save
+      </Button>
+    </Grid>
+  </Grid>
+</Window>
